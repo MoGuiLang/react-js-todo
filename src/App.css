@@ -1,38 +1,76 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: blanchedalmond;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.btn {
+  border: none;
+  background-color: blue;
   color: white;
+  padding: 10px 20px;
+  border-radius: 50px;
+  margin-left: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+input {
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+  font-size: 17px;
+}
+.container {
+  background-color: pink;
+  width: 500px;
+  margin: 200px auto 0;
+  padding: 20px 30px;
+  border-radius: 50px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.container .form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.container .todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 20px;
+  margin: 10px 10px;
+  background-color: plum;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.container .todo::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 5px;
+}
+
+.container .todo-green::before {
+  background-color: green;
+}
+.container .todo-red::before {
+  background-color: red;
+}
+
+.todo .icon:not(:first-child) {
+  margin-left: 10px;
+}
+.todo .icon {
+  transform: scale(1.5);
+}
+
+.todo .icon:hover {
+  cursor: pointer;
 }
